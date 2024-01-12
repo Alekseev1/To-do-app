@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+ul,
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img,
+svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+	font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background-color: transparent;
+}
+
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.to-do-app-title {
+	color: #002765;
+	font-size: 20px;
+	font-weight: bold;
+	/* margin-bottom: 20px; */
+}
+
+.container {
+	width: 100%;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #153677, #4e085f);
+	padding: 10px;
+}
+
+.to-do-app-wrapper {
+
+
+	width: 100%;
+	max-width: 600px;
+	background: #fff;
+	margin: 100px auto 30px;
+	padding: 40px 30px 70px;
+	border-radius: 8px;
+}
+
+.to-do__title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.to-do-app-image {
+	margin-left: 20px;
+	width: 30px;
+	height: auto;
+}
+
+.to-do__row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #edeef0;
+	border-radius: 30px;
+	padding-left: 20px;
+	margin-bottom: 25px;
+}
+
+.to-do__input {
+	flex: 1;
+	border: none;
+	outline: none;
+	background: transparent;
+	padding: 10px;
+}
+
+button {
+	border: none;
+	outline: none;
+	padding: 12px 16px;
+	background: #ff5945;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 10px;
+
+}
+
+.to-do__input::placeholder {}
+
+.to-do__input:focus {}
+
+
+ul li {
+	position: relative;
+	font-style: 17px;
+	padding: 12px 8px 12px 50px;
+	user-select: none;
+	cursor: pointer;
+}
+
+ul li::before {
+	content: '';
+	position: absolute;
+	height: 28px;
+	width: 28px;
+	border-radius: 50%;
+	background-image: url('./img/uncheck.png');
+	background-size: cover;
+	background-position: center;
+	top: 7px;
+	left: 8px;
+
+}
+
+ul li.checked {
+	color: #555;
+	text-decoration: line-through;
+}
+
+ul li.checked::before {
+	background-image: url('./img/check.png');
+}
+
+ul li span {
+	position: absolute;
+	right: 0;
+	top: 8px;
+	width: 30px;
+	height: 30px;
+	font-size: 22px;
+	color: #555;
+	text-align: center;
+	border-radius: 50%
+}
+
+ul li span:hover {
+	background: #edeef0;
+}
